@@ -37,7 +37,7 @@ If you have a keen eye, however, you might notice that this would not work if $a
 Finally, all we have left to do is to use this property to find the maximum subarray of `nums`. Note that this can also be phrased as finding $0 \leq a < b < n$ such that $$\sum_{i=a}^b x_i$$ is the largest.
 From the property we just found, we can reword this to finding the $0 \leq a < b < n$ such that $Sums\[b\]-Sums\[a-1\]$ is the largest. Intuitively, it makes sense that when finding these such elements we want to find a $Sums\[a-1\]$ that is as small as possible so that so that we are subtracting as little as possible from our upper sum.
 
-This idea is quite similar to the Largest Profit from Stocks problem, and we can actually solve it in a very similar way. We can go from the beginning to the end of $Sums$ and keep track of the smallest sum and compare it to the current sum. If that difference is the largest that we have seen so far, then it is the largest subarray that we have seen so far. Here is a pseudocode of this idea implemented (I would recommend completing the "Best Time to Buy and Sell Stock" problem in $O(n)$ time first to get a better intuition of what's going on):
+This idea is quite similar to the Largest Profit from Stocks problem, and we can actually solve it in a very similar way. We can go from the beginning to the end of $Sums$ and keep track of the smallest sum and compare it to the current sum. If that difference is the largest that we have seen so far, then it is the largest subarray's sum that we have seen so far. Here is a pseudocode of this idea implemented (I would recommend completing the "Best Time to Buy and Sell Stock" problem in $O(n)$ time first to get a better intuition of what's going on):
 
 ```
 Sums = [length(nums)]
