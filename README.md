@@ -25,3 +25,9 @@ That is the accumulation of change. So now, we can see how the same ideas from c
 
 ## Generalization
 
+Let $x_0,x_1,\ldots,x_{n-1}$ be the integers in `nums` in the order which they appear in `nums`.
+
+We can compute the accumulation of change as $Sums=\[x_0, ~x_0+x_1, ~\ldots, ~x_0+x_1+\ldots+x_{n-1}\]$.
+Now, we must find how to determine the total accumulation of change between $x_a$ and $x_b$ inclusively such that $0 \leq a < b < n$. We can define this accumulation of change as $x_a+x_{a+1}+\ldots+x_b=\sum_{i=a}^b x_i$.
+We know that $Sums\[a\]=\sum_{i=0}^a x_i$ and $Sums\[b\]=\sum_{i=0}^b x_i$. Therefore, $Sums\[b\]-Sums\[a\]=\left[\sum_{i=0}^b x_i\right] - \left[\sum_{i=0}^a x_i\right]=\sum_{i=a+1}^b$. Notice how our result is the accumulation of change from $x_{a+1}$ to $x_b$ (inclusive)? That's because $Sums[a]$ *includes* $x_a$. Well, if we use that same result and add 1 to our lower sum, we get $Sums\[b\]-Sums\[a-1\]=\sum_{i=(a-1)+1}^b=\sum_{i=a}^b$.
+Perfect! That is the accumulation of change between $a$ and $b$ inclusively!
