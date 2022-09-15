@@ -17,7 +17,7 @@ The **total accumulative** change from $x=a$ to $x=b$ is $\int_{a}^{b} f(x) \,dx
 
 Let's look at this idea with integers to get a better grasp:
 
-Let $S=\[3, 6, 2, 11, -4, 1\]$ and $S_0, S_1, \ldots , S_5$ be the integers in S in order of their appearance in the sequence. Now lets look at the accumulation of change in $S$ (you can think of it as the 'integral' of S). $S_{accum}=\[3, 9, 11, 22, 18, 19\]$. Notice how we are simply adding the current value at each index.
+Let $S=\[3, 6, 2, 11, -4, 1\]$. Lets look at the accumulation of change in $S$ (you can think of it as the 'integral' of S). $S_{accum}=\[3, 9, 11, 22, 18, 19\]$. Notice how we are simply adding the current value at each index.
 
 $S_{accum}=\[3\, ~3+6\, ~3+6+2\, ~3+6+2+4\, ~\ldots\]$
 
