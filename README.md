@@ -1,5 +1,5 @@
 # maximum-subarray-math
-Mathematical intuition behind an O(n) solution to the "Maximum Subarray" problem
+Mathematical intuition behind an O(n) time and O(1) extra space solution to the "Maximum Subarray" problem
 
 ## The Problem
 (Taken from Leetcode)
