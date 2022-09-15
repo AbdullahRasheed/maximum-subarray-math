@@ -7,4 +7,8 @@ Given an integer array `nums`, find the contiguous subarray (containing at least
 A subarray is a congiguous part of an array.
 
 ## Building Intuition
-Consider this basic Calculus rule: $\int_{a}^{c} f(x) \,dx - \int_{a}^{b} f(x) \,dx = \int_{b}^{c} f(x) \,dx$ where $a < b < c$.
+Consider this basic Calculus rule: 
+```math
+\int_{a}^{c} f(x) \,dx - \int_{a}^{b} f(x) \,dx = \int_{b}^{c} f(x) \,dx
+```
+where $a < b < c$.
