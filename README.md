@@ -29,7 +29,7 @@ Let $x_0,x_1,\ldots,x_{n-1}$ be the integers in `nums` in the order which they a
 
 We can compute the accumulation of change as $Sums=\[x_0, ~x_0+x_1, ~\ldots, ~x_0+x_1+\ldots+x_{n-1}\]$.
 Now, we must find how to determine the total accumulation of change between $x_a$ and $x_b$ inclusively such that $0 < a < b < n$. We can define this accumulation of change as $$x_a+x_{a+1}+\ldots+x_b=\sum_{i=a}^b x_i$$
-We know that $$Sums\[a\]=\sum_{i=0}^a x_i$$ and $$Sums\[b\]=\sum_{i=0}^b x_i$$ Therefore, $$Sums\[b\]-Sums\[a\]=\left[\sum_{i=0}^b x_i\right] - \left[\sum_{i=0}^a x_i\right]=\sum_{i=a+1}^b x_i$$ Notice how our result is the accumulation of change from $x_{a+1}$ to $x_b$ (inclusive)? That's because $Sums[a]$ *includes* $x_a$. Well, if we use that same result and plug in $a-1$ instead for our lower sum, we get $$Sums\[b\]-Sums\[a-1\]=\sum_{i=(a-1)+1}^b x_i=\sum_{i=a}^b x_i$$
+We know that $$Sums\[a\]=\sum_{i=0}^a x_i$$ and $$Sums\[b\]=\sum_{i=0}^b x_i$$ Therefore, $$Sums\[b\]-Sums\[a\]=\left[\sum_{i=0}^b x_i\right] - \left[\sum_{i=0}^a x_i\right]=\sum_{i=a+1}^b x_i$$ Notice how our result is the accumulation of change from $x_{a+1}$ to $x_b$ (inclusive)? That's because $Sums[a]$ *includes* $x_a$. Well, if we use that same result and plug in $a-1$ instead for our lower sum, we get $$Sums\[b\]-Sums\[a-1\]=\sum_{i=(a-1)+1}^b x_i~=\sum_{i=a}^b x_i$$
 Perfect! That is the accumulation of change between $a$ and $b$ inclusively!
 
 If you have a keen eye, however, you might notice that this would not work if $a=0$. In fact, that is why the bounds for $a$ were $0 < a < b$. This is simply because $Sums\[a-1\]$ does not exist. So what do we do in this case? This is a special case, and in fact, our definition of $Sums\[i\]$ for all $0 \leq i < n$ is the total accumulation of change from $x_0$ to $x_b$. $$Sums\[b\]=\sum_{i=0}^b x_i = x_0+x_1+\ldots+x_b$$ Therefore, in the case that $a=0$, our total accumulation of change from $x_a$ to $x_b$ inclusively is $Sums\[b\]$. For simplicity, we will from here on state that $Sums\[m<0\]=0$. That way, even if $a=0$, our previously found property still holds.
@@ -40,7 +40,7 @@ From the property we just found, we can reword this to finding the $0 \leq a < b
 This idea is quite similar to the Largest Profit from Stocks problem, and we can actually solve it in a very similar way. We can go from the beginning to the end of $Sums$ and keep track of the smallest sum and compare it to the current sum. If that difference is the largest that we have seen so far, then it is the largest subarray's sum that we have seen so far. Here is a pseudocode of this idea implemented (I would recommend completing the "Best Time to Buy and Sell Stock" problem in $O(n)$ time first to get a better intuition of what's going on):
 
 ```
-Sums = [length(nums)]
+Sums = array of size length(nums)
 Sums[0] = nums[0]
 min = 0
 maxSum = Sums[0]
