@@ -4,7 +4,7 @@ Mathematical intuition behind an $O(n)$ time and $O(1)$ extra space solution to 
 ## The Problem
 (Taken from Leetcode)
 Given an integer array `nums`, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
-A subarray is a congiguous part of an array.
+A subarray is a contiguous part of an array.
 
 ## Building Intuition
 Consider this basic Calculus rule: 
