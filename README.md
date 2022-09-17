@@ -42,14 +42,14 @@ This idea is quite similar to the Largest Profit from Stocks problem, and we can
 ```
 Sums = array of size length(nums)
 Sums[0] = nums[0]
-min = 0
+minSum = 0
 maxSum = Sums[0]
 
 for i in [1, length(nums)-1]
   Sums[i] = Sums[i-1] + nums[i]
   
-  min = min(Sums[i-1], min)
-  maxSum = max(Sums[i] - min, maxSum)
+  minSum = min(Sums[i-1], minSum)
+  maxSum = max(Sums[i] - minSum, maxSum)
 
 return maxSum
 ```
