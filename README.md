@@ -13,7 +13,7 @@ $$\int_{a}^{c} f(x) ~dx - \int_{a}^{b} f(x) ~dx = \int_{b}^{c} f(x) ~dx$$
 
 where $a < b < c$.
 
-The **total accumulative** change from $x=a$ to $x=b$ is $\int_{a}^{b} f(x) ~dx$. Similarly, the total accumulation of change from $x=a$ to $x=c$ is $\int_{a}^{c} f(x) ~dx$. Then, since $a < b < c$, subtracting that change from $a$ to $b$ leaves us with to total change from $b$ to $c$.
+The **total accumulative** change from $x=a$ to $x=b$ is $\int_{a}^{b} f(x) ~dx$. Similarly, the total accumulation of change from $x=a$ to $x=c$ is $\int_{a}^{c} f(x) ~dx$. Then, since $a < b < c$, subtracting that change from $a$ to $b$ leaves us with the total change from $b$ to $c$.
 
 Let's look at this idea with integers to get a better grasp:
 
